@@ -1,0 +1,12 @@
+<h2>Milo</h2>
+{% if sessions %}
+    <h2>All current sessions</h2>
+    <ul>
+    {% for session in sessions %}
+	<li><a href="session/{{ session.id }}">{{ session.name }}</a></li>
+    {% endfor %}
+{% else %}
+    <h2>No sessions currently planned</h2>
+    <p>Make one <a href="/new">here.</a></p>
+{% endif %}
+<a href="/">Back to home.</a>

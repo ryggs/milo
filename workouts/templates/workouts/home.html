@@ -1,0 +1,19 @@
+<h2>Welcome to Milo</h2>
+<ul>
+	{% if not user.is_authenticated %}
+	<li><a href=/signup>Sign up</a></li>
+	<li><a href="/login">Login</a></li>
+	{% else %}
+	<li><a href="/new">Create a Session</a></li>
+	<li><a href="/sessions">Find Workout Sessions</a></li>
+	<li><a href="/joined">Sessions you've joined</a></li>
+	<li><a href="/made">Sessions you've created</a></li>
+	<li><a href='/logout'>Log out</a></li>
+	{% endif %}
+</ul>
+{% if user.is_authenticated %}
+<p> You are logged in as: {{ user.username }} </p>
+{% else %}
+<p> You are not logged in.</p>
+{% endif %}
+<a href="/">Back to home.</a>
