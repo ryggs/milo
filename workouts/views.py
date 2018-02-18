@@ -81,6 +81,8 @@ def create(request):
 
 @login_required
 def join(request,session_id):
+    if request.method != 'POST':
+        return render(request,'workouts/operation_not_allowed.html')
     session = WorkoutSession.objects.get(pk=session_id)
     if (session.created_by != request.user):
         session.attendees.add(request.user)
@@ -90,6 +92,8 @@ def join(request,session_id):
 
 @login_required
 def leave(request,session_id):
+    if request.method != 'POST':
+        return render(request,'workouts/operation_not_allowed.html')
     session = WorkoutSession.objects.get(pk=session_id)
     if (session.created_by != request.user):
         session.attendees.remove(request.user)
@@ -98,6 +102,8 @@ def leave(request,session_id):
 
 @login_required
 def delete(request,session_id):
+    if request.method != 'POST':
+        return render(request,'workouts/operation_not_allowed.html')
     session = WorkoutSession.objects.get(pk=session_id)
     if (session.created_by == request.user):
         session.delete()
