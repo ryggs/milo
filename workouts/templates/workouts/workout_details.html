@@ -1,4 +1,6 @@
-<h2>Milo<h2>
+{% extends "workouts/base.html" %}
+
+{% block content %}
 <h3>Session Information </h3>
 <p>Name: {{ session.name }}</p>
 <p>Description: {{ session.description }}</p>
@@ -29,3 +31,4 @@
 {% endif %}
 {% endif %}
 <a href="/">Back to home.</a>
+{% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>{% block title %}Milo{% endblock %}</title>
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <link rel="stylesheet" href="../../static/workouts/main.css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav id="main-nav" class="navbar navbar-dark navbar-expand-lg">
+            <a class="navbar-brand" href="/">Milo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav-collapse">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="/sessions">Sessions</a>
+                </div>
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        {% if user.is_authenticated %}
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">{{ user.username }}</a>
+                        {% endif %}
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/logout">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="main-container" class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+				</div>
+                <div id="main-content" class="col-sm-8">
+					{% block content %}
+                    <h1>Workout Session Info</h1>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque aliquam vestibulum morbi. Egestas diam in arcu cursus euismod quis viverra. Metus vulputate eu scelerisque felis imperdiet proin. Morbi quis commodo odio aenean sed adipiscing diam. Arcu non sodales neque sodales ut etiam sit. Ultrices neque ornare aenean euismod elementum nisi. Et ultrices neque ornare aenean. Aliquam faucibus purus in massa tempor nec feugiat nisl. Elementum curabitur vitae nunc sed velit. Donec adipiscing tristique risus nec feugiat in. Euismod elementum nisi quis eleifend quam. Dolor sit amet consectetur adipiscing elit pellentesque. Et malesuada fames ac turpis egestas. Proin nibh nisl condimentum id venenatis a condimentum vitae sapien. Euismod nisi porta lorem mollis aliquam ut. Leo vel orci porta non pulvinar neque laoreet. Eu scelerisque felis imperdiet proin fermentum leo vel orci porta. Consectetur adipiscing elit duis tristique sollicitudin. Dignissim diam quis enim lobortis scelerisque.</p>
+                    <p>Elementum tempus egestas sed sed risus pretium. Diam vulputate ut pharetra sit amet aliquam id diam. Diam donec adipiscing tristique risus. Enim blandit volutpat maecenas volutpat. In egestas erat imperdiet sed euismod nisi porta. Et netus et malesuada fames ac turpis egestas integer eget. Auctor elit sed vulputate mi sit amet mauris commodo. Tristique senectus et netus et malesuada fames. Nibh tellus molestie nunc non blandit massa enim nec. Tortor condimentum lacinia quis vel eros donec ac odio. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae. Sagittis aliquam malesuada bibendum arcu. In hendrerit gravida rutrum quisque non tellus. Lacus sed viverra tellus in hac. Congue eu consequat ac felis donec et. Pellentesque habitant morbi tristique senectus et netus. Ac tortor vitae purus faucibus ornare. Aliquet lectus proin nibh nisl condimentum id. Ac tortor vitae purus faucibus ornare. Amet consectetur adipiscing elit duis tristique sollicitudin.</p>
+                    <p>Et ligula ullamcorper malesuada proin. Turpis massa sed elementum tempus egestas sed sed risus pretium. Augue eget arcu dictum varius duis at consectetur lorem. Sapien faucibus et molestie ac feugiat. Id cursus metus aliquam eleifend mi in. Nullam eget felis eget nunc lobortis mattis. Laoreet non curabitur gravida arcu ac tortor dignissim. Porttitor rhoncus dolor purus non enim praesent elementum. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Volutpat consequat mauris nunc congue nisi. Amet consectetur adipiscing elit pellentesque habitant morbi tristique. Tristique senectus et netus et malesuada.</p>
+                    <p>Sagittis id consectetur purus ut faucibus pulvinar. In aliquam sem fringilla ut. Iaculis nunc sed augue lacus viverra vitae. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Erat velit scelerisque in dictum non consectetur a erat nam. Nisi est sit amet facilisis magna etiam tempor orci. Condimentum lacinia quis vel eros donec ac odio tempor orci. Magna ac placerat vestibulum lectus mauris ultrices eros. Proin sed libero enim sed faucibus turpis. Commodo odio aenean sed adipiscing diam donec adipiscing tristique risus. Laoreet id donec ultrices tincidunt arcu non sodales. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Lacinia quis vel eros donec ac. Vestibulum lectus mauris ultrices eros in cursus turpis.</p>
+                    <p>Bibendum neque egestas congue quisque. Accumsan in nisl nisi scelerisque eu ultrices. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Vel pretium lectus quam id. Adipiscing bibendum est ultricies integer quis auctor elit sed. Arcu dui vivamus arcu felis bibendum ut tristique et. Quis imperdiet massa tincidunt nunc pulvinar. Maecenas ultricies mi eget mauris pharetra. Amet mauris commodo quis imperdiet massa tincidunt.</p>
+					{% endblock %}
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </body>
+</html>

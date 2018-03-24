@@ -1,4 +1,6 @@
-<h2>Milo</h2>
+{% extends "workouts/base.html" %}
+
+{% block content %}
 <h3>Create Session</h3>
 <form action="/create" method="post">
     {% csrf_token %}
@@ -6,4 +8,4 @@
     {{ form.as_p }}
     <input type="submit" value="Create"/>
 </form>
-<a href="/">Back to home.</a>
+{% endblock %}

@@ -121,7 +121,7 @@ def detail(request,session_id):
                 sesh_ids.add(sesh.id)
 
     sesh_ids = list(sesh_ids)
-    session = get_object_or_404(WorkoutSession, pk=session_id) 
+    session = get_object_or_404(WorkoutSession, pk=session_id)
     return render(request,'workouts/workout_details.html',{
         'session' : session,
         'request' : request,

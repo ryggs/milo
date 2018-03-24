@@ -1,4 +1,6 @@
-<h2>Sign up for Milo</h2>
+{% extends "workouts/base.html" %}
+
+{% block content %}
 <form method="post">
 	{% csrf_token %}
 	{% for field in form %}
@@ -12,4 +14,4 @@
 	{% endfor %}
 	<button type="submit">Sign up</button>
 </form>
-<a href="/">Back to home.</a>
+{% endblock %}

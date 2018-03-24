@@ -1,4 +1,6 @@
-<h2>Milo</h2>
+{% extends "workouts/base.html" %}
+
+{% block content %}
 {% if sessions %}
     <h2>All current sessions</h2>
     <ul>
@@ -9,4 +11,4 @@
     <h2>No sessions currently planned</h2>
     <p>Make one <a href="/new">here.</a></p>
 {% endif %}
-<a href="/">Back to home.</a>
+{% endblock %}

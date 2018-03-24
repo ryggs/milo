@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+#main-nav {
+    background-color: #a00;
+}
+
+#main-content {
+    padding-top: 2em;
+    padding-left: 2em;
+}
+
+#main-sidebar-container {
+    background-color: #eee;
+    padding-top: 4em;
+    padding-right: 2em;
+}
+
+#main-sidebar {
+    padding-top: 1em;
+    line-height: 2.5;
+}
+
+#main-sidebar ul {
+    list-style-type: none;
+    padding-left: .8em;
+}
+
+#main-sidebar .btn {
+    background-color: #a00;
+    color: #fff;
+}
+
+#main-sidebar a {
+    color: #600;
+}

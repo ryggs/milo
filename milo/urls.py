@@ -22,7 +22,7 @@ from workouts import views as workouts_views
 urlpatterns = [
     path(r'', include('workouts.urls')),
     #path('admin/',admin.site.urls),
-    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout,{'template_name':'workouts/logged_out.html'}, name='logout'),
     url(r'^signup/$', workouts_views.signup, name='signup'),
 ]
