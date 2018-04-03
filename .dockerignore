@@ -1,3 +1,11 @@
 .gitignore
 Dockerfile
 LICENSE
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
